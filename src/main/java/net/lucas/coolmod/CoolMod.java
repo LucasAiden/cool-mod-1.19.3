@@ -1,6 +1,7 @@
 package net.lucas.coolmod;
 
 import com.mojang.logging.LogUtils;
+import net.lucas.coolmod.block.ModBlocks;
 import net.lucas.coolmod.item.ModCreativeModeTabs;
 import net.lucas.coolmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+// ihjbvgefrihfgdhiuggrtgrtrg
 @Mod(CoolMod.MOD_ID)
 public class CoolMod
 {
@@ -27,6 +29,7 @@ public class CoolMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -44,9 +47,15 @@ public class CoolMod
             event.accept(ModItems.RAW_BLACK_OPAL);
         }
 
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+        }
+
         if(event.getTab() == ModCreativeModeTabs.COOL_TAB) {
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
+
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
         }
     }
 
