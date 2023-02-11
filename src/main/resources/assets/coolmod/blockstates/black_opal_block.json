@@ -1,5 +1,7 @@
 {
   "variants":  {
-    "": { "model": "coolmod:block/black_opal_block" }
+    "": {
+      "model": "coolmod:block/black_opal_block"
+    }
   }
 }
