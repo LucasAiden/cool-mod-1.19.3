@@ -15,6 +15,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_BLACK_OPAL = ITEMS.register("raw_black_opal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ERROR_ITEM = ITEMS.register("error_item",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

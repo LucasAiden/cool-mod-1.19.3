@@ -61,6 +61,7 @@ public class CoolMod
         if(event.getTab() == ModCreativeModeTabs.COOL_TAB) {
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
+            event.accept(ModItems.ERROR_ITEM);
 
             event.accept(ModBlocks.BLACK_OPAL_BLOCK);
             event.accept(ModBlocks.BLACK_OPAL_ORE);
